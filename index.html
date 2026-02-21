@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ilgaz Dijital Rehber</title>
     <style>
-        :root { --primary: #1b4d3e; --accent: #f1c40f; }
+        :root { --primary: #1b4d3e; --accent: #f1c40f; --red: #c0392b; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; color: #333; }
         
         header { background: var(--primary); color: white; padding: 10px 15px; display: flex; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-sizing: border-box; }
-        .header-logo { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent); margin: 0 15px; object-fit: cover; }
+        .header-logo { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--accent); margin: 0 15px; object-fit: cover; }
         .menu-icon { font-size: 28px; cursor: pointer; }
 
         .sidenav { height: 100%; width: 0; position: fixed; z-index: 2000; top: 0; left: 0; background: #1a1a1a; overflow-x: hidden; transition: 0.4s; padding-top: 20px; }
@@ -18,25 +18,20 @@
         .sidenav a { padding: 15px 30px; text-decoration: none; font-size: 18px; color: #ccc; display: block; border-bottom: 1px solid #222; }
 
         .hero { 
-            height: 30vh; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000');
-            background-size: cover; background-position: center;
-            display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 50px; color: white;
+            height: 30vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 50px; color: white;
         }
         .hero h1 { font-size: 1.8rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.7); padding: 0 20px; }
 
         .container { padding: 20px; margin-top: -40px; }
-        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-height: 400px; line-height: 1.6; }
+        .card { background: blue; padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-height: 400px; line-height: 1.6; }
         .divider { height: 5px; width: 70px; background: var(--accent); margin: 15px 0; border-radius: 5px; }
         
         .metin-alani { white-space: pre-line; font-size: 1.1rem; }
-        .icerik-resim { width: 100%; border-radius: 15px; margin: 15px 0; }
-
-        /* İletişim Buton Stili */
-        .iletisim-liste { margin-top: 20px; }
-        .iletisim-oge { background: #f9f9f9; padding: 15px; border-radius: 12px; margin-bottom: 10px; border-left: 5px solid var(--primary); display: flex; align-items: center; gap: 15px; }
-        .btn-github { display: block; background: #24292e; color: white !important; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .btn-github:active { transform: scale(0.98); }
+        .sehit-kart { background: #fff5f5; padding: 15px; border-radius: 12px; margin-bottom: 10px; border-left: 5px solid var(--red); }
+        .sehit-isim { font-weight: bold; color: var(--red); font-size: 1.2rem; display: block; }
+        .iletisim-oge { background: #f9f9f9; padding: 15px; border-radius: 12px; margin-bottom: 10px; border-left: 5px solid var(--primary); }
+        .btn-github { display: block; background: #24292e; color: white !important; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 10px; }
 
         #VERI_DEPOSU { display: none; }
     </style>
@@ -44,19 +39,8 @@
 <body>
 
     <div id="VERI_DEPOSU">
-        <div id="txt-iletisim-baslik">📞 İletişim</div>
-        <div id="txt-iletisim-ust">Bize Ulaşın</div>
-        <div id="txt-iletisim-tel">+90 376 000 00 00</div>
-        <div id="txt-iletisim-adres">Ilgaz, Çankırı</div>
-        <div id="txt-iletisim-mail">info@ilgazihtisas.com</div>
-        
-        <div id="txt-iletisim-github">https://raw.githubusercontent.com/Yasarkuloglu/rehber-index.html/refs/heads/main/index.html
-</div>
-        
-        <div id="txt-iletisim-icerik">Öneri ve görüşleriniz için aşağıdaki kanalları kullanabilirsiniz:</div>
-
-        <div id="txt-giris-baslik">🏠 Ilgaz Rehberi</div><div id="txt-giris-ust">Hoş Geldiniz</div><div id="txt-giris-icerik">1-Tarihçe<br>2-Coğtafi Konum<br>3-Gezip Görelim<br>4-Şiirler<br>5-Mutfak<br> 6-Ilgaz Değerleri</div>
-        <div id="txt-tarih-baslik">📜 Tarihçe</div><div id="txt-tarih-ust">Şanlı Geçmiş</div><div id="txt-tarih-icerik">Ilgaz'ın Tarihçesi
+        <div id="txt-giris-baslik">🏠 Ilgaz Rehberi</div><div id="txt-giris-ust">Hoş Geldiniz</div><div id="txt-giris-icerik">1-Ilgaz Tarihi<br>2-Coğrafi Konum<br>3-Gezip Görelim<br>4-Şiirler<br>5-Mutfak<br> 6-Ilgaz Değerleri</div>
+        <div id="txt-tarih-baslik">📜 Ilgaz Tarihi</div><div id="txt-tarih-ust">Şanlı Geçmiş</div><div id="txt-tarih-icerik">Ilgaz'ın Tarihçesi
 		Ilgaz, geçmişte doğu ve batı medeniyetlerinin kaynaştığı ve farklı kültürlerin bir araya geldiği önemli bir coğrafyadır. İlçemizin kuruluşuna ilişkin MÖ 2000 yılına ait olduğu tahmin edilen Arkhaik, Helenistik ve Roma çağına dayanan yüzeysel buluntular elde edilmiş olmasına rağmen kesin yerleşim tarihi bu buluntulara bakılarak belirlenememiştir.
 
 		En eski yerleşimin Cendere Köyü ile Devrez Çayı'nın İnköy ile birleştiği yer arasında bulunduğu ve Roma-Bizans dönemine kadar indiği tahmin edilmekte ve buluntulara dayanılarak ileri sürülmektedir.
@@ -108,7 +92,7 @@
 		Batıda kaynağını Orta İlçesi topraklarından alan Devrez Çayı, doğuya doğru uzanan çöküntü oluğunun içine yerleşmiştir. Oluğun oluşumu, kırılma ve çökme olayları sonucu Ilgaz Dağları ile aynı dönemde gerçekleşmiştir. Oluk, bir yamacı daha dik, asimetrik bir yapıdadır ve ilçenin doğu sınırlarına doğru iyice daralarak bir boğaz haline gelir. Bu yapıdan ayrılmayan faylar boyunca, kuzeydeki bölüm, güneye oranla daha fazla doğuya doğru kayıp çökmüş, dolayısıyla bu alan, yurdumuzun en faal ve tahripkâr deprem kuşağı haline gelmiştir.
 		Devrez Vadisi aynı zamanda Kuzey Batı Anadolu fay hattının tabanını oluşturmaktadır.1943 yılında, bölgede ilçe merkezinde orta şiddette hasara yol açan bir deprem meydana gelmiştir. Devrez Vadisine kuzeyden ve güneyden karışan dereler, sel karakterli olup yaz mevsiminde genellikle kururlar. Bu vadiler içinde en önemlisi, Gökçay Vadisi’dir. Bunu Yuvaderesi Vadisi izler. Kuzeyden karışan diğer derelerin oluşturdukları vadiler, Pazarçayı Vadisi, Gircen Çayı Vadisi, Bucura (Yaylaören) Çayı Vadisi’dir. Birbiri ardınca sıralanan bu vadiler, ya sırtlarla ya da üstü hafif dalgalı yüzey parçalarıyla birbirinden ayrılırlar.
 		Alıntı</div>
-        <div id="txt-gezi-baslik">🌲 Gezip Görelim</div><div id="txt-gezi-ust">Gezip Görülecek Yerler</div><div id="txt-gezi-icerik">Ilgaz Milli Parkı.
+         <div id="txt-gezi-baslik">🌲 Gezip Görelim</div><div id="txt-gezi-ust">Gezip Görülecek Yerler</div><div id="txt-gezi-icerik">Ilgaz Milli Parkı.
 		Tanıtım: 02.06.1976 tarihinde ilan edilen 1088,61 hektar büyüklüğündeki Ilgaz Dağı Milli Parkı Batı Karadeniz Bölgesi'nde, Çankırı ve Kastamonu illeri sınırları içinde yer almaktadır. Barındırdığı doğal, kültürel ve rekreasyonel kaynak değerleri ile bölgesel ve ülkesel ölçekte önemli bir konumdadır. Ilgaz Dağı Milli Parkı'nın 750,86 hektarı Kastamonu, 337,75 hektarı da Çankırı il sınırları içerisinde bulunmaktadır.  Ankara'dan Kastamonu ve Çankırı'ya giden yol mili parkın içinden geçer.
 
 		Ulaşım: Kastamonu Ankara yolu üzerinde bulunmakta olup, Kastamonu İl Merkezine 41 Km, Sinop'a 225 Km, Ankara'ya 207 Km, İstanbul'a 477 km uzaklıkta bulunmaktadır.
@@ -120,8 +104,6 @@
 		Ilgaz Dağı Milli Parkı içinde 1990 yıllarından bu yana kış turizmi aktivitesi sürdürülmektedir. Milli Park içinde ve sınırında bulunan tesisler kış aylarında büyük çoğunluğu İstanbul ve Ankara'dan kayak yapma amacıyla gelen ziyaretçilere hizmet verecek şekilde yapılanmışlardır.
 
  		Alıntı
-		
-		
 		</div>
         <div id="txt-siir-baslik">✍️ Şiirler</div><div id="txt-siir-ust">Ilgaz Şiirleri</div><div id="txt-siir-icerik">İlgaz
 		Şair: Zeki Ömer Defne
@@ -139,10 +121,31 @@
 		Gölü var; dağlara düşmüş yürektir,
 		Yolu var; içinde yitsem gerektir.
 		Bir Ilgaz, er Ilgaz, yar Ilgaz!..
+		</div>
+        <div id="txt-yemek-baslik">🍴 Lezzetlerimiz</div><div id="txt-yemek-ust">Lezzetlerimiz</div><div id="txt-yemek-icerik">1.Sarı Kılçık Pirinci<br>2.Keşkek<br>3.Perişka<br>3.Kavut<br>4.Pıhtı<br>5.Yarma Çorbası<br>6.Erişte<br>7.Güveç</div>
+        
+        <div id="txt-sehit-baslik">🇹🇷 Aziz Şehitlerimiz</div>
+        <div id="txt-sehit-ust">Vatan Size Minnettar</div>
+        <div id="txt-sehit-icerik">
+            <div class="sehit-kart"><span class="sehit-isim">Şehit İsmi 1</span><span>D.Tarihi - Şahadet Tarihi</span></div>
+            <div class="sehit-kart"><span class="sehit-isim">Şehit İsmi 2</span><span>D.Tarihi - Şahadet Tarihi</span></div>
+        </div>
 
-                                                                                                                           </div>
-        <div id="txt-yemek-baslik">🍴 Mutfak</div><div id="txt-yemek-ust">Lezzetler</div><div id="txt-yemek-icerik">Yöresel yemekler...</div>
-        <div id="txt-deger-baslik">🌟 Değerler</div><div id="txt-deger-ust">Kişiler</div><div id="txt-deger-foto">.</div><div id="txt-deger-isim">.</div><div id="txt-deger-icerik">.</div>
+        <div id="txt-deger-baslik">🌟 Ilgaz Değerleri</div>
+        <div id="txt-deger-ust">Kıymetli Şahsiyetler</div>
+        <div id="txt-deger-foto">yasar.jpg</div>
+        <div id="txt-deger-isim">Yaşar Kuloğlu</div>
+        <div id="txt-deger-icerik">Ilgaz'ın yetiştirdiği değerli isimlerden biridir. 
+    	Eğitim hayatı ve projeleri ile bölgeye katkı sağlamaktadır.
+    	Buraya istediğin kadar uzun yazı ekleyebilirsin, kutu otomatik genişler.</div>
+
+        <div id="txt-iletisim-baslik">📞 İletişim</div>
+        <div id="txt-iletisim-ust">Bize Ulaşın</div>
+        <div id="txt-iletisim-tel">+90 376 000 00 00</div>
+        <div id="txt-iletisim-adres">Ilgaz, Çankırı</div>
+        <div id="txt-iletisim-mail">info@ilgazihtisas.com</div>
+        <div id="txt-iletisim-github">https://raw.githubusercontent.com/Yasarkuloglu/rehber-index.html/refs/heads/main/index.html</div>
+        <div id="txt-iletisim-icerik">Öneri ve görüşleriniz için:</div>
     </div>
 
     <div id="mySidenav" class="sidenav">
@@ -152,11 +155,12 @@
         </div>
         <span style="position:absolute;top:10px;right:25px;font-size:36px;color:white;cursor:pointer" onclick="closeNav()">&times;</span>
         <a href="#" onclick="ekranaBas('giris')">🏠 Ana Sayfa</a>
-        <a href="#" onclick="ekranaBas('tarih')">📜 Tarihçe</a>
+        <a href="#" onclick="ekranaBas('tarih')">📜 Ilgaz Tarihi</a>
         <a href="#" onclick="ekranaBas('cografya')">📍 Coğrafi Konum</a>
         <a href="#" onclick="ekranaBas('gezi')">🌲 Gezip Görelim</a>
         <a href="#" onclick="ekranaBas('siir')">✍️ Şiirler</a>
-        <a href="#" onclick="ekranaBas('yemek')">🍴 Mutfak</a>
+        <a href="#" onclick="ekranaBas('yemek')">🍴 Yemeklerimiz</a>
+        <a href="#" onclick="ekranaBas('sehit')">🇹🇷 Şehitlerimiz</a>
         <a href="#" onclick="ekranaBas('deger')">🌟 Ilgaz Değerleri</a>
         <a href="#" onclick="ekranaBas('iletisim')">📞 İletişim</a>
     </div>
@@ -176,6 +180,7 @@
             <div id="content-body" class="metin-alani"></div>
         </div>
     </div>
+
     <script>
         function openNav() { document.getElementById("mySidenav").style.width = "280px"; }
         function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
@@ -193,20 +198,11 @@
                 const adr = document.getElementById("txt-iletisim-adres").innerText;
                 const emal = document.getElementById("txt-iletisim-mail").innerText;
                 const gurl = document.getElementById("txt-iletisim-github").innerText;
-                
-                document.getElementById("content-body").innerHTML = `
-                    <p>${icerik}</p>
-                    <div class="iletisim-liste">
-                        <div class="iletisim-oge">📞 <b>Tel:</b> ${tel}</div>
-                        <div class="iletisim-oge">📧 <b>E-Posta:</b> ${emal}</div>
-                        <div class="iletisim-oge">📍 <b>Adres:</b> ${adr}</div>
-                    </div>
-                    <a href="${gurl}" target="_blank" class="btn-github">💻 GITHUB PROJESİNE GİT</a>
-                `;
+                document.getElementById("content-body").innerHTML = `<p>${icerik}</p><div class="iletisim-oge">📞 <b>Tel:</b> ${tel}</div><div class="iletisim-oge">📧 <b>Mail:</b> ${emal}</div><div class="iletisim-oge">📍 <b>Adres:</b> ${adr}</div><a href="${gurl}" target="_blank" class="btn-github">💻 GITHUB PROJESİNE GİT</a>`;
             } else if(anahtar === 'deger') {
                 const foto = document.getElementById("txt-deger-foto").innerText;
                 const isim = document.getElementById("txt-deger-isim").innerText;
-                document.getElementById("content-body").innerHTML = `<div style="text-align:center"><img src="${foto}" style="width:150px;height:150px;border-radius:50%;border:4px solid var(--accent);object-fit:cover;" onerror="this.src='https://via.placeholder.com/150'"><div style="font-size:1.4rem;font-weight:bold;color:var(--primary);margin-top:10px;">${isim}</div><div style="margin-top:15px;text-align:left;background:#f9f9f9;padding:15px;border-radius:10px;">${icerik}</div></div>`;
+                document.getElementById("content-body").innerHTML = `<div style="text-align:center"><img src="${foto}" style="width:150px;height:150px;border-radius:50%;border:4px solid var(--accent);object-fit:cover;" onerror="this.src='https://via.placeholder.com/150'"><div style="font-size:1.4rem; font-weight:bold; color:var(--primary); margin:10px 0;">${isim}</div><div style="text-align:left; background:#f9f9f9; padding:15px; border-radius:10px;">${icerik}</div></div>`;
             } else {
                 document.getElementById("content-body").innerHTML = icerik;
             }
@@ -216,6 +212,4 @@
         window.onload = function() { ekranaBas('giris'); };
     </script>
 </body>
-
 </html>
-
