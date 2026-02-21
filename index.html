@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilgaz Dijital Rehber</title>
+    <style>
+        :root { --primary: #1b4d3e; --accent: #f1c40f; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; color: #333; }
+        
+        header { background: var(--primary); color: white; padding: 10px 15px; display: flex; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-sizing: border-box; }
+        .header-logo { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent); margin: 0 15px; object-fit: cover; }
+        .menu-icon { font-size: 28px; cursor: pointer; }
+
+        .sidenav { height: 100%; width: 0; position: fixed; z-index: 2000; top: 0; left: 0; background: #1a1a1a; overflow-x: hidden; transition: 0.4s; padding-top: 20px; }
+        .sidenav-logo-box { text-align: center; padding: 20px 10px; border-bottom: 1px solid #333; }
+        .sidenav-logo { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--accent); margin-bottom: 10px; }
+        .sidenav a { padding: 15px 30px; text-decoration: none; font-size: 18px; color: #ccc; display: block; border-bottom: 1px solid #222; }
+
+        .hero { 
+            height: 30vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 50px; color: white;
+        }
+        .hero h1 { font-size: 1.8rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.7); padding: 0 20px; }
+
+        .container { padding: 20px; margin-top: -40px; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-height: 400px; line-height: 1.6; }
+        .divider { height: 5px; width: 70px; background: var(--accent); margin: 15px 0; border-radius: 5px; }
+        
+        .metin-alani { white-space: pre-line; font-size: 1.1rem; }
+        .icerik-resim { width: 100%; border-radius: 15px; margin: 15px 0; }
+
+        /* İletişim Buton Stili */
+        .iletisim-liste { margin-top: 20px; }
+        .iletisim-oge { background: #f9f9f9; padding: 15px; border-radius: 12px; margin-bottom: 10px; border-left: 5px solid var(--primary); display: flex; align-items: center; gap: 15px; }
+        .btn-github { display: block; background: #24292e; color: white !important; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn-github:active { transform: scale(0.98); }
+
+        #VERI_DEPOSU { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="VERI_DEPOSU">
+        <div id="txt-iletisim-baslik">📞 İletişim</div>
+        <div id="txt-iletisim-ust">Bize Ulaşın</div>
+        <div id="txt-iletisim-tel">+90 376 000 00 00</div>
+        <div id="txt-iletisim-adres">Ilgaz, Çankırı</div>
+        <div id="txt-iletisim-mail">info@ilgazihtisas.com</div>
+        
+        <div id="txt-iletisim-github">https://raw.githubusercontent.com/Yasarkuloglu/index/refs/heads/main/ilgaz?token=GHSAT0AAAAAADWAISHS6MERV2HPCUZGSOZ62MZS2PA</div>
+        
+        <div id="txt-iletisim-icerik">Öneri ve görüşleriniz için aşağıdaki kanalları kullanabilirsiniz:</div>
+
+        <div id="txt-giris-baslik">🏠 Ilgaz Rehberi</div><div id="txt-giris-ust">Hoş Geldiniz</div><div id="txt-giris-icerik">Menüden keşfe başlayın.</div>
+        <div id="txt-tarih-baslik">📜 Tarihçe</div><div id="txt-tarih-ust">Şanlı Geçmiş</div><div id="txt-tarih-icerik">İstiklal Yolu...</div>
+        <div id="txt-cografya-baslik">📍 Coğrafya</div><div id="txt-cografya-ust">2587 Metre</div><div id="txt-cografya-icerik">Konum bilgileri...</div>
+        <div id="txt-gezi-baslik">🌲 Gezip Görelim</div><div id="txt-gezi-ust">Doğa Durakları</div><div id="txt-gezi-icerik">Ilgaz Milli Parkı.</div>
+        <div id="txt-siir-baslik">✍️ Şiirler</div><div id="txt-siir-ust">Ozanlar</div><div id="txt-siir-icerik">Ilgaz şiirleri...</div>
+        <div id="txt-yemek-baslik">🍴 Mutfak</div><div id="txt-yemek-ust">Lezzetler</div><div id="txt-yemek-icerik">Yöresel yemekler...</div>
+        <div id="txt-deger-baslik">🌟 Değerler</div><div id="txt-deger-ust">Kişiler</div><div id="txt-deger-foto">.</div><div id="txt-deger-isim">.</div><div id="txt-deger-icerik">.</div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-logo-box">
+            <img src="ILgaz.png" class="sidenav-logo" alt="Logo">
+            <div style="color:var(--accent); font-weight:bold;">ILGAZ REHBERİ</div>
+        </div>
+        <span style="position:absolute;top:10px;right:25px;font-size:36px;color:white;cursor:pointer" onclick="closeNav()">&times;</span>
+        <a href="#" onclick="ekranaBas('giris')">🏠 Ana Sayfa</a>
+        <a href="#" onclick="ekranaBas('tarih')">📜 Tarihçe</a>
+        <a href="#" onclick="ekranaBas('cografya')">📍 Coğrafi Konum</a>
+        <a href="#" onclick="ekranaBas('gezi')">🌲 Gezip Görelim</a>
+        <a href="#" onclick="ekranaBas('siir')">✍️ Şiirler</a>
+        <a href="#" onclick="ekranaBas('yemek')">🍴 Mutfak</a>
+        <a href="#" onclick="ekranaBas('deger')">🌟 Ilgaz Değerleri</a>
+        <a href="#" onclick="ekranaBas('iletisim')">📞 İletişim</a>
+    </div>
+
+    <header>
+        <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        <img src="ILgaz.png" class="header-logo" alt="Logo">
+        <span style="font-weight:bold;">ILGAZ DİJİTAL</span>
+    </header>
+
+    <div class="hero"><h1 id="hero-title"></h1></div>
+
+    <div class="container">
+        <div class="card">
+            <h1 id="content-title"></h1>
+            <div class="divider"></div>
+            <div id="content-body" class="metin-alani"></div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() { document.getElementById("mySidenav").style.width = "280px"; }
+        function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+
+        function ekranaBas(anahtar) {
+            const baslik = document.getElementById("txt-" + anahtar + "-baslik").innerHTML;
+            const ust = document.getElementById("txt-" + anahtar + "-ust").innerHTML;
+            const icerik = document.getElementById("txt-" + anahtar + "-icerik").innerHTML;
+
+            document.getElementById("hero-title").innerHTML = ust;
+            document.getElementById("content-title").innerHTML = baslik;
+
+            if(anahtar === 'iletisim') {
+                const tel = document.getElementById("txt-iletisim-tel").innerText;
+                const adr = document.getElementById("txt-iletisim-adres").innerText;
+                const emal = document.getElementById("txt-iletisim-mail").innerText;
+                const gurl = document.getElementById("txt-iletisim-github").innerText;
+                
+                document.getElementById("content-body").innerHTML = `
+                    <p>${icerik}</p>
+                    <div class="iletisim-liste">
+                        <div class="iletisim-oge">📞 <b>Tel:</b> ${tel}</div>
+                        <div class="iletisim-oge">📧 <b>E-Posta:</b> ${emal}</div>
+                        <div class="iletisim-oge">📍 <b>Adres:</b> ${adr}</div>
+                    </div>
+                    <a href="${gurl}" target="_blank" class="btn-github">💻 GITHUB PROJESİNE GİT</a>
+                `;
+            } else if(anahtar === 'deger') {
+                const foto = document.getElementById("txt-deger-foto").innerText;
+                const isim = document.getElementById("txt-deger-isim").innerText;
+                document.getElementById("content-body").innerHTML = `<div style="text-align:center"><img src="${foto}" style="width:150px;height:150px;border-radius:50%;border:4px solid var(--accent);object-fit:cover;" onerror="this.src='https://via.placeholder.com/150'"><div style="font-size:1.4rem;font-weight:bold;color:var(--primary);margin-top:10px;">${isim}</div><div style="margin-top:15px;text-align:left;background:#f9f9f9;padding:15px;border-radius:10px;">${icerik}</div></div>`;
+            } else {
+                document.getElementById("content-body").innerHTML = icerik;
+            }
+            closeNav();
+            window.scrollTo(0,0);
+        }
+        window.onload = function() { ekranaBas('giris'); };
+    </script>
+</body>
+</html>
